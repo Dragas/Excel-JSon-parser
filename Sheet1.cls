@@ -76,7 +76,7 @@ Public Function ParseMuhJson(text As String)
     destination.Charset = "utf-8"
     destination.Open
     destination.writeText text
-    destination.savetofile ThisWorkbook.FullName & ".json", 2
+    destination.savetofile Application.ActiveWorkbook.FullName & ".json", 2
     destination.Close
 End Function
 
