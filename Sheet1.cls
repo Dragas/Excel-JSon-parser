@@ -83,7 +83,7 @@ End Function
 Sub stuff(Optional name As String = "")
     Dim Properties As Collection, Values As Collection
     Set Properties = ParseMuhProperties(Application.InputBox("Select Property Range", "Property Range", Type:=8))
-    Set Values = ParseMuhRange(Application.InputBox("Select Property Range", "Property Range", Type:=8))
+    Set Values = ParseMuhRange(Application.InputBox("Select value range", "Value range", Type:=8))
     name = name & vbNewLine & ParseJson(Properties, Values)
     If MsgBox("Add more Data to parse?", vbYesNo, "Add more data") = vbYes Then
         stuff (name & ",")
